@@ -62,4 +62,4 @@ plt.setp(ax.get_yticklabels())
 plt.tight_layout()
 
 plt.ylim(-0.03, 1.1)
-plt.savefig("nvidia_success_rate.png", dpi = 1000)
+plt.savefig("results/nvidia_success_rate.png", dpi = 1000)

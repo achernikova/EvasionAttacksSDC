@@ -33,7 +33,7 @@ MODEL_FILE = 'models/sdc_nvidia'
 RESULTS_FILE = 'results/res_attack_nvidia.txt'
 RESULTS_SUCCESS_FILE = 'results/res_attack_success_nvidia.txt'
 RESULTS_PROBAS_FILE = 'results/res_attack_probas_nvidia.txt'
-RESULTS_LABELS_FILE = 'results/res_attack_probas_labels_nvidia.txt'
+RESULTS_LABELS_FILE = 'results/res_attack_labels_nvidia.txt'
 NUM_ATTACKS = 300
 
 with tf.Session() as sess:

@@ -42,7 +42,7 @@ MODEL_FILE = 'models/sdc_epoch'
 RESULTS_FILE = 'results/res_attack_epoch.txt'
 RESULTS_SUCCESS_FILE = 'results/res_attack_success_epoch.txt'
 RESULTS_PROBAS_FILE = 'results/res_attack_probas_epoch.txt'
-RESULTS_LABELS_FILE = 'results/res_attack_probas_labels_epoch.txt'
+RESULTS_LABELS_FILE = 'results/res_attack_labels_epoch.txt'
 NUM_ATTACKS = 300
 
 with tf.Session() as sess:
