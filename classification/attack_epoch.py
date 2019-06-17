@@ -59,7 +59,7 @@ with tf.Session() as sess:
 
     tmp = 0
 
-    for k in range (2):
+    for k in range (NUM_ATTACKS):
         
         attack = L2ClassificationAttack(sess, model, batch_size = 2, max_iterations = 1000, confidence = 0)
         inputs, targets = generate_data(data, samples = 1, targeted = True, start = k, inception = False)
@@ -86,115 +86,6 @@ with tf.Session() as sess:
     results.write(str(distortions))
     results_success.write(str(success))
        
-
-
-
-
-    # for k in range (3):
-        
-
-
-    #     attack = CarliniL2(sess, model, batch_size = 2, max_iterations=1000, confidence=0)
-
-    #     inputs, targets = generate_data(data, samples = 1, targeted=True, start=k, inception=False)
-
-    #     tmp += np.sum((inputs[0])**2)**.5
-
-    #     adv = attack.attack(inputs, targets)
-
-    #     boxmul = 1 / 2
-    #     boxplus = 1/2
-
-        
-
-
-
-
-    #     plt.imshow(inputs[0])
-    #     plt.axis('off')
-    #     plt.savefig('input_epoch'+str(k)+'.png', dpi = 1000)
-
-    #     # x = adv[0]
-
-    #     # x = np.arctanh((x - boxplus) /boxmul * 0.999999)
-    #     # print (x)
-    
-    #     # plt.imshow(x)
-    #     #plt.show()
-
-    #     for i in range(len(adv)):
-    #         inp =  model.model.predict(inputs[i:i+1])
-    #         # print("Valid:",inp)
-            
-    #         # inp = softmax(inp)
-
-    #         # inp_str = str(inp[:,0])+','+str(inp[:,1])+','+str(inp[:,2])+'\n'
-
-    #         # results_labels_probas.write(inp_str)
-
-    #         adver = model.model.predict(adv[i:i+1])
-    #         # print("Classification:", adver)
-    #         # print()
-
-    #         # adver = softmax(adver)
-    #         # adver_str = str(adver[:,0])+','+str(adver[:,1])+','+str(adver[:,2])+'\n'
-    #         # results_probas.write(adver_str)
-
-
-    #         x = adv[i]
-    #         x = np.arctanh((x - 0) /1/2 * 0.999999)
-
-    #         plt.imshow(x)
-    #         plt.axis('off')
-
-    #         figname = 'adv_epoch'+str(k)+str(i)+'.png'
-    #         plt.savefig(figname, dpi = 1000)
-        
-
-
-    #         #results.write(str(adver))
-    #         #results.write("---------------------")
-
-    #         # if (np.argmax(inp) != np.argmax (adver)):
-    #         #     success +=1
-
-    #         # print(success)
-
-    #         # distortions.append(np.sum((adver - inp)**2)**.5)
-    #         # print(str(distortions))
-            
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

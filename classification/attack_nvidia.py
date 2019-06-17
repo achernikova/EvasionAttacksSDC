@@ -47,7 +47,7 @@ with tf.Session() as sess:
     results_labels = open(RESULTS_LABELS_FILE,'w')
 
 
-    for k in range (1):
+    for k in range (NUM_ATTACKS):
 
         attack = L2ClassificationAttack(sess, model, batch_size = 2, max_iterations = 1000, confidence = 0)
 
