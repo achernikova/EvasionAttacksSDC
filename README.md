@@ -161,6 +161,8 @@ This will produce epoch_roc.png/nvidia_roc.png files under results/ folder.
 In order to get results plots for the attack against 'sdc' regression model:
 *	run results_plots.py under regression/ folder
 
+This will produce cdf_mse.png file under results/folder with CDF for the case with and without the presence of attack.
+
 
 
 ## Adversarial Examples
