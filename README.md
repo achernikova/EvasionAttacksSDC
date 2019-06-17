@@ -150,14 +150,17 @@ In order to get the success rate plot wrt the amount of perturbation added by th
 *	run success_epoch.py or success_nvidia.py under classification/ folder
 *	it is possible to additionally change the distance thresholds in these files corresponding to 'more_*' fields
 
-This will produce epoch_success_rate.png/nvidia_success_rate.png files
+This will produce epoch_success_rate.png/nvidia_success_rate.png files under results/ folder.
 
 
 In order to get micro-average ROC curves:
 * run roc_epoch.py or roc_nvidia.py files under classification/ folder 
 
+This will produce epoch_roc.png/nvidia_roc.png files under results/ folder.
+
 In order to get results plots for the attack against 'sdc' regression model:
 *	run results_plots.py under regression/ folder
+
 
 
 ## Adversarial Examples
