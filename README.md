@@ -105,6 +105,7 @@ In order to run the attack against 'sdc_epoch' classification model:
 which you want to run the attack, create the folder with corresponding images
 *	Specify the path to this .csv file(IMAGE_FILE = 'path to .csv file')  and folder with images(IMAGE_FOLDER = 'path to the folder')
 in attack_epoch.py file under classification/ folder
+* 	Specify the number of images, which are used to run the attack (NUM_ATTACKS field)
 *	run attack_epoch.py
 
 This will create the following files with results:
@@ -120,13 +121,14 @@ In order to run the attack against 'sdc_nvidia' classification model:
 which you want to run the attack, create the folder with corresponding images
 *	Specify the path to this .csv file(IMAGE_FILE = 'path to .csv file')  and folder with images(IMAGE_FOLDER = 'path to the folder')
 in attack_nvidia.py file under classification/ folder
+* 	Specify the number of images, which are used to run the attack (NUM_ATTACKS field)
 *	run attack_nvidia.py
 
 This will create the following files with results under results/ folder:
 *	'res_attack_nvidia.txt' - file with resulting distances from input file
 *	'res_attack_success_nvidia.txt' - file with the number of successfull attacks
 *	'res_attack_probas_nvidia.txt'- file with the resulting adversarial class probabilites
-* 'res_attack_probas_labels_nvidia.txt' - file with predicted legitimate class probabilities
+* 	'res_attack_probas_labels_nvidia.txt' - file with predicted legitimate class probabilities
 
 
 In order to run the attack against 'sdc' regression model under results/ folder:
@@ -140,7 +142,7 @@ This will create the following files with results under results/ folder:
 *	'res_attack_mse_ratio.txt'
 *	'res_attack_mse_no_attack.txt'
 *	'res_attack_mse_with_attack.txt'
-* 'res_attack_distance.txt'
+* 	'res_attack_distance.txt'
 
 For the classification case there is 'straight_right_left.csv' file with the information about imaged from all three classes,
 that can be used to run the attack against classification model.
