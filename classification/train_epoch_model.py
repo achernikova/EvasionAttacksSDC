@@ -12,15 +12,15 @@ from keras.utils import np_utils
 from keras.models import load_model
 from os import path
 
-from utilities import *
+from utilities import SDC_data
     
-def train(data, file_name, params, num_epochs = 50, batch_size = 128, train_temp = 1, init = None):
+def train(data, file_name, params, num_epochs = 50, batch_size = 128, init = None):
     """
     Standard neural network training procedure.
     """
     model = Sequential()
     
-    model.add(Conv2D(params[0], (3, 3), input_shape = data.train_data.shape[1:]))
+    model.add(Conv2D(params[0], (3, 3), input_shape = data.attack_data.shape[1:]))
     
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -47,7 +47,7 @@ def train(data, file_name, params, num_epochs = 50, batch_size = 128, train_temp
 
     def fn(correct, predicted):
         return tf.nn.softmax_cross_entropy_with_logits(labels = correct,
-                                                       logits = predicted/train_temp)
+                                                       logits = predicted)
 
     sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
     
@@ -55,7 +55,7 @@ def train(data, file_name, params, num_epochs = 50, batch_size = 128, train_temp
                   optimizer=sgd,
                   metrics=['accuracy'])
     
-    model.fit(data.train_data, data.train_labels,
+    model.fit(data.attack_data, data.attack_labels,
               batch_size=batch_size,
               validation_split = 0.1,
               nb_epoch=num_epochs,
