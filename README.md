@@ -134,23 +134,23 @@ in attack_epoch.py file under regression/ folder
 *	run epoch_attack.py
 
 This will create the following files with results under results/ folder:
-*	'res_attack_mse_ratio.txt'
-*	'res_attack_mse_no_attack.txt'
-*	'res_attack_mse_with_attack.txt'
-* 	'res_attack_distance.txt'
+*	'res_attack_mse_ratio.txt' - file with the list of ratios of legitimate MSE over adversarial MSE
+*	'res_attack_mse_no_attack.txt' - file with the MSE values for the legitimate images
+*	'res_attack_mse_with_attack.txt'- file with the MSE values for the adversarial images
+* 	'res_attack_distance.txt' - file with the resulting L2 norm distances
 
 For the classification case there is 'straight_right_left.csv' file with the information about imaged from all three classes,
 that can be used to run the attack against classification model.
 
 ## Results Plots
-In order to get the success rate plot wrt the amount of perturbation added by the adversary:
+In order to get the success rate plot wrt the amount of perturbation added by the adversary(classification task):
 *	run success_epoch.py or success_nvidia.py under classification/ folder
 *	it is possible to additionally change the distance thresholds in these files corresponding to 'more_*' fields
 
 This will produce epoch_success_rate.png/nvidia_success_rate.png files under results/ folder.
 
 
-In order to get micro-average ROC curves:
+In order to get micro-average ROC curves wrt different L2 norm distances(classification case):
 * run roc_epoch.py or roc_nvidia.py files under classification/ folder 
 
 This will produce epoch_roc.png/nvidia_roc.png files under results/ folder.
