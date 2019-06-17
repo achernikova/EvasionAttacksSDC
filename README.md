@@ -167,17 +167,20 @@ This will produce cdf_mse.png file under results/folder with CDF for the case wi
 
 ## Adversarial Examples
 
-In order to run the attack against 'sdc_epoch'/'sdc_nvidia' classification model:
+In order to produce the adversarial example against sdc_epoch'/'sdc_nvidia' classification model:
 *	Create the .csv file with the same column names as in interpolated.csv files and paste the information about images, against 
 which you want to run the attack, create the folder with corresponding images
 *	Specify the path to this .csv file(IMAGE_FILE = 'path to .csv file')  and folder with images(IMAGE_FOLDER = 'path to the folder')
 in adv_images_epoch.py/adv_images_nvidia.py file under classification/ folder
 *	run adv_images_epoch.py/adv_images_nvidia.py
 
-Under classification folder there is 'epoch.csv' and 'nvidia.csv' files for adversarial examples against epoch and nvidia model respectively.
+Under classification folder there is 'epoch.csv' and 'nvidia.csv' files with the information about images that can be modfied inorder to create adversarial examples against epoch and nvidia model respectively.
 In this case IMAGE_FILE = 'nvidia.csv' or 'epoch.csv' IMAGE_FOLDER = 'path to center/ folder'
 
-In order to run the attack against 'sdc' regression model:
+This will produce images for the input files and corresponding adversarial examples under results/ folder.
+
+
+In order to produce the adversarial example against 'sdc' regression model:
 *	Create the .csv file with the same column names as in interpolated.csv files and paste the information about images, against 
 which you want to run the attack, create the folder with corresponding images
 *	Specify the path to this .csv file(IMAGE_FILE = 'path to .csv file')  and folder with images(IMAGE_FOLDER = 'path to the folder')
@@ -187,6 +190,8 @@ in adv_images.py file under regression folder.
 Under regression folder there is 'test_image.csv' file for adversarial example against epoch regression model.
 In this case IMAGE_FILE = 'test_image.csv' and IMAGE_FOLDER = 'path to center/ folder'.
 
+
+This will produce images for the input files and corresponding adversarial examples under results/ folder.
 
 
 
