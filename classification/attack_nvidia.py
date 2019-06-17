@@ -30,10 +30,10 @@ from model import SDC_model_nvidia
 IMAGE_FILE = 'straight_right_left.csv'
 IMAGE_FOLDER = '/home/alesia/Documents/sdc/'
 MODEL_FILE = 'models/sdc_nvidia'
-RESULTS_FILE = 'res_attack_nvidia.txt'
-RESULTS_SUCCESS_FILE = 'res_attack_success_nvidia.txt'
-RESULTS_PROBAS_FILE = 'res_attack_probas_nvidia.txt'
-RESULTS_LABELS_FILE = 'res_attack_probas_labels_nvidia.txt'
+RESULTS_FILE = 'results/res_attack_nvidia.txt'
+RESULTS_SUCCESS_FILE = 'results/res_attack_success_nvidia.txt'
+RESULTS_PROBAS_FILE = 'results/res_attack_probas_nvidia.txt'
+RESULTS_LABELS_FILE = 'results/res_attack_probas_labels_nvidia.txt'
 NUM_ATTACKS = 300
 
 with tf.Session() as sess:

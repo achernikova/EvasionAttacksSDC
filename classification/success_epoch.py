@@ -6,7 +6,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import os
 
-DISTANCES_FILE = 'res_attack_epoch_straight_right_left.txt'
+DISTANCES_FILE = 'results/res_attack_epoch.txt'
 
 with open(DISTANCES_FILE, 'r') as f:
     dist = f.read()
@@ -62,4 +62,4 @@ plt.setp(ax.get_xticklabels())
 plt.setp(ax.get_yticklabels())
 plt.tight_layout()
 plt.ylim(-0.03,1.1)
-plt.savefig("epoch_success_rate_final.png", dpi = 250)
+plt.savefig("epoch_success_rate.png", dpi = 250)
