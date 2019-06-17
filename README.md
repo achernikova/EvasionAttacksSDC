@@ -93,9 +93,6 @@ in regression_epoch_training.py file under regression/ folder
 
 The resulting trained model 'sdc' will be in models/ folder.
 
-For all three models there are trained models under models/ folder for both regression and classification tasks.
-
-
 ## Performing Attack
 
 In order to run the attack against 'sdc_epoch' classification model:
