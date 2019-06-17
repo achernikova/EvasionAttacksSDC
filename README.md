@@ -18,7 +18,6 @@ Firstly, I need to acknowledge chrisgundling and rwightman.
 *	classification/
 	*	results/
 		*	txt files with attack results
-		*	plots with results
 	*	models/
 		*	sdc_epoch
 		*	sdc_nvidia
@@ -38,7 +37,6 @@ Firstly, I need to acknowledge chrisgundling and rwightman.
 *	regression/
 	* results/
 		*	txt files with attack results
-		*	plots with results
 	*	models/
 		*	sdc
 	*	attack.py
@@ -113,7 +111,7 @@ This will create the following files with results:
 *	'res_attack_success_epoch.txt' - file with the number of successfull attacks
 *	'res_attack_probas_epoch.txt'- file with the resulting adversarial class probabilites
 * 'res_attack_probas_labels_epoch.txt' - file with predicted legitimate class probabilities
-
+epoch_success_rate.png
 
 
 In order to run the attack against 'sdc_nvidia' classification model:
@@ -151,6 +149,8 @@ that can be used to run the attack against classification model.
 In order to get the success rate plot wrt the amount of perturbation added by the adversary:
 *	run success_epoch.py or success_nvidia.py under classification/ folder
 *	it is possible to additionally change the distance thresholds in these files corresponding to 'more_*' fields
+
+This will produce epoch_success_rate.png/nvidia_success_rate.png files
 
 
 In order to get micro-average ROC curves:
