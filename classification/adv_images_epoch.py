@@ -40,12 +40,14 @@ IMAGE_FILE = 'epoch.csv'
 IMAGE_FOLDER = '/home/alesia/Documents/sdc/'
 MODEL_FILE = 'models/sdc_epoch'
 
+NUM_IMAGES = 1
+
 with tf.Session() as sess:
 
     data = SDC_data(IMAGE_FILE, IMAGE_FOLDER)
     model = SDC_model_epoch(MODEL_FILE)
 
-    for k in range (1):
+    for k in range (NUM_IMAGES):
             
         attack = L2ClassificationAttack(sess, model, batch_size = 2, max_iterations=1000, confidence=0)
 
@@ -58,7 +60,7 @@ with tf.Session() as sess:
 
         plt.imshow(inputs[0])
         plt.axis('off')
-        plt.savefig('input_epoch'+str(k)+'.png', dpi = 250)
+        plt.savefig('results/input_epoch'+str(k)+'.png', dpi = 250)
 
         for i in range(len(adv)):
             
@@ -70,7 +72,7 @@ with tf.Session() as sess:
             plt.imshow(x)
             plt.axis('off')
 
-            figname = 'adv_epoch'+str(k)+str(i)+'.png'
+            figname = 'results/adv_epoch'+str(k)+str(i)+'.png'
             plt.savefig(figname, dpi = 250)
         
 
