@@ -103,7 +103,7 @@ in attack_epoch.py file under classification/ folder
 * 	Specify the number of images, which are used to run the attack (NUM_ATTACKS field)
 *	run attack_epoch.py
 
-This will create the following files with results:
+This will create the following files with results under results/ folder:
 *	'res_attack_epoch.txt' - file with resulting distances from input file
 *	'res_attack_success_epoch.txt' - file with the number of successfull attacks
 *	'res_attack_probas_epoch.txt'- file with the resulting adversarial class probabilites
