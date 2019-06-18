@@ -18,6 +18,7 @@ Firstly, I need to acknowledge chrisgundling and rwightman.
 *	classification/
 	*	results/
 		*	txt files with attack results
+		*	png files with result plots
 	*	models/
 		*	sdc_epoch
 		*	sdc_nvidia
@@ -37,6 +38,7 @@ Firstly, I need to acknowledge chrisgundling and rwightman.
 *	regression/
 	* results/
 		*	txt files with attack results
+		*	png files with results plots
 	*	models/
 		*	sdc
 	*	attack.py
