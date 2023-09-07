@@ -8,7 +8,7 @@ Dependencies: numpy, tensorflow, keras, imageio, skimage
 
 ## Acknowledgements
 
-Firstly, I need to acknowledge chrisgundling and rwightman.
+Firstly, I would like to acknowledge chrisgundling and rwightman.
 
 *	I've used chrisgundling instructions for data extraction( https://github.com/udacity/self-driving-car/tree/master/steering-models/community-models/cg23)
 	and his Epoch nodel architecture for training the classifier.
