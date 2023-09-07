@@ -8,11 +8,11 @@ Dependencies: numpy, tensorflow, keras, imageio, skimage
 
 ## Acknowledgements
 
-Firstly, I would like to acknowledge chrisgundling and rwightman.
+I would like to acknowledge chrisgundling and rwightman.
 
-*	I've used chrisgundling instructions for data extraction( https://github.com/udacity/self-driving-car/tree/master/steering-models/community-models/cg23)
+*	I used chrisgundling instructions for data extraction( https://github.com/udacity/self-driving-car/tree/master/steering-models/community-models/cg23)
 	and his Epoch nodel architecture for training the classifier.
-*	I've used rwightman’s reader (https://github.com/rwightman/udacity-driving-reader) for extracting the ROS .bag files.
+*	I used rwightman’s reader (https://github.com/rwightman/udacity-driving-reader) for extracting the ROS .bag files.
   
 ## Project structure
 *	classification/
